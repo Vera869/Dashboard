@@ -3,13 +3,9 @@ import './App.css'
 function App() {
 
   return (
-    <>
-      <div>
-        Initial Project
-        <p></p> 
-      </div>
-       
-    </>
+    <div>
+      <p>Initial Project</p> 
+    </div>
   )
 }
 
