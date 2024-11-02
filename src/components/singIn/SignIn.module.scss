@@ -1,0 +1,141 @@
+@import '../../variables';
+@import '../../template';
+
+.form {
+   position: fixed;
+   z-index: 1;
+   width: 520px;
+   height: 406.76px;
+   top: 50%;
+   left: 50%;
+   right: auto;
+   bottom: auto;
+   margin-right: -50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   @include flex(column, center, center, 40px);
+   background-color: $colorBackground;
+   .form__header {
+      width: 432px;
+      height: 76.76px;
+      display: flex;
+      @include flex(column, center, center, 8px);
+      .form__header__logoBlock {
+         width: 200px;
+         height: 44.76px;
+         display: flex;
+         @include flex(row, center, center, 14px);
+         padding: 1.4px 0.69px 1.4px 1.4px;
+         .form__header__logoBlock__logo {
+            width: 46.15px;
+            height: 41.96px;
+         }
+         .form__header__logoBlock__logotype {
+            width: 137.77px;
+            height: 24.44px;
+         }
+      }
+      .form__header__title {
+         width: 432px;
+         height: 24px;
+         @include font(20px, $colorText, 500, 24.2px, left);
+      }
+   }
+   .form__main {
+      width: 520px;
+      height: 290px;
+      display: flex;
+      @include flex(column, center, center, 16px);
+      .inputsBlock {
+         width: 520px;
+         height: 164px;
+         display: flex;
+         @include flex(column, center, center, 12px);
+         .inputBox {
+            width: 520px;
+            height: 76px;
+            display: flex;
+            @include flex(column, center, flex-start, 8px);
+            .inputBox__lable {
+               width: fit-content;
+               height: 19px;
+               @include font(16px, $colorText, 400, 19.36px, left);
+            }
+            .inputBox__input {
+               all: unset;
+               width: 488px;
+               // min-width: 392px;
+               height: 49px;
+               padding: 16px;
+               border-radius: 12px;
+               border: 1px solid $colorBorderInput;
+               @include font(14px, $colorText, 400, 16.94px, left);
+               &:active,
+               :hover,
+               :focus {
+                  border: 1px solid $colorBorderInputActive;
+               }
+               &::placeholder {
+                  @include font(14px, $colorPlaceholder, 400, 16.94px, left);
+               }
+            }
+            .inputBox__icon {
+               width: 16px;
+               height: 15px;
+               position: fixed;
+               top: 249px;
+               right: 17.17px;
+               // left: 503px;
+               z-index: 10;
+               cursor: pointer;
+             }
+         }
+
+      }
+      .buttonBlock {
+         width: 520px;
+         height: 110px;
+         display: flex;
+         @include flex(column, center, center, 16px);
+         .buttonBlock__title {
+            @include font(16px, $colorText, 400, 19.36px, left);
+         }
+         .buttonBlock__content {
+            width: 520px;
+            height: 75px;
+            display: flex;
+            @include flex(column, center, center, 8px);
+            .btn {
+               width: 520px;
+               height: 48px;
+               padding: 13px 0;
+               display: flex;
+               @include flex(row, center, center, 8px);
+               border-radius: 12px;
+               background: $colorBackgroundButton;
+               cursor: pointer;
+               .btn__title {
+                  width: 114px;
+                  height: 22px;
+                  @include font(18px, $colorTextLight, 400, 21.78px, left);
+               }
+               .btn__img {
+                  width: 20px;
+                  height: 10.52px;
+               }
+            }
+            .message {
+               max-width: 350px;
+               width: fit-content;
+               height: 19px;
+               @include font(16px, $colorText, 400, 19.36px, center);
+               .message_span {
+                  color: $colorLinks;
+                  text-decoration: underline;
+                  cursor: pointer;
+               }
+            }
+         }
+      }
+   }
+}

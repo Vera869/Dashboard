@@ -1,0 +1,16 @@
+@import './variables';
+
+@mixin font($fs, $fc, $fw, $lh, $ta) {
+    font-family: $font;
+    font-size: $fs;
+    color: $fc;
+    font-weight: $fw;
+    line-height: $lh;
+    text-align: $ta;
+}
+@mixin flex($fd, $jc, $ai, $g) {
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g
+}
