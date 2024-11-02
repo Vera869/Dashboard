@@ -1,0 +1,97 @@
+@import '../../variables';
+@import '../../template';
+
+// @include flex(column, center, center, 40px);  @include font(14px, $colorPlaceholder, 400, 16.94px, left);
+.wrapper {
+   width: 256px;
+   height: 1024px;
+   background: linear-gradient(180deg, #131C55 0%, rgba(19, 28, 85, 0.35) 104.8%, rgba(19, 28, 85, 0) 169.64%);
+
+   // background: linear-gradient(180deg, $gradientLight 0%, $gradientMedium 104.8%, $gradientDark 169.64%);
+   display: flex;
+   @include flex(column, flex-start, center, 32px);
+   .wrapper__header {
+      width: 256px;
+      height: 44px;
+      padding: 10px 0;
+      display: flex;
+      @include flex(row, center, center, 10px);
+      background: $colorBackgroundSideBar;
+   }
+   .wrapper__main {
+      width: 216px;
+      height: 896px;
+      padding: 0 20px 32px 20px;
+      display: flex;
+      @include flex(column, space-between, center, 0);
+      .nav{
+         width: 216px;
+         height: 455px;
+         display: flex;
+         @include flex(column, flex-start, center, 24px);
+         .nav__box {
+            width: 216px;
+            height: 19px;
+            display: flex;
+            @include flex(row, space-between, center, 24px);
+            opacity: 0.5px;
+            .nav__box__title {
+               max-width: 180px;
+               height: 19px;
+               display: flex;
+               @include flex(row, space-between, center, 8px);
+               .nav__box__title__icon{
+                  width: 16px;
+                  height: 14.4px;
+                  opacity: 50%;
+               }
+               .nav__box__title__icon_active {
+                  fill: #ffff;
+                  opacity: 100%;
+               }
+               .nav__box__title__txt {
+                  opacity: 50%;
+                  @include font(16px, $colorTextLight, 400, 19.36px, left);
+               }
+               .nav__box__title__txt_active {
+                  @include font(16px, $colorTextLight, 400, 19.36px, left);
+                  opacity: 100%;
+               }
+            }
+            .nav__box__arrow {
+               width: 14.96px;
+               height: 8.61px;
+               opacity: 50%;
+               transform: rotate(180deg);
+               cursor: pointer;
+            }
+            .nav__box__arrow_active {
+               opacity: 100%;
+               transform: rotate(0deg);
+            }
+         }
+      }
+      .aside {
+         width: 205px;
+         height: 40px;
+         display: flex;
+         @include flex(row, center, center, 8px);
+         .aside__img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+         }
+         .aside__data {
+            width: 157px;
+            height: 36px;
+            .aside__data__txt {
+               @include font(16px, $colorTextLight, 500, 19.36px, left);
+               .aside__data__span {
+                  @include font(14px, $colorTextLight, 400, 16.94px, left);
+               }
+            }
+            
+         }
+      }
+   }
+}
